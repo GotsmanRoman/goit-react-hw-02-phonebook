@@ -25,8 +25,9 @@ export class Phonebook extends React.Component {
     let isUnique = true;
     this.state.contacts.map(item => {
       if (item.name.toLowerCase() === value.toLowerCase()) {
-        return (isUnique = false);
+        isUnique = false;
       }
+      return isUnique;
     });
     return isUnique;
   };
